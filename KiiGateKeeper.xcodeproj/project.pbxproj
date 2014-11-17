@@ -14,7 +14,13 @@
 		7D648D9B1A19D76B005C5317 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D648D9A1A19D76B005C5317 /* Images.xcassets */; };
 		7D648D9E1A19D76B005C5317 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D648D9C1A19D76B005C5317 /* LaunchScreen.xib */; };
 		7D648DAA1A19D76B005C5317 /* KiiGateKeeperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D648DA91A19D76B005C5317 /* KiiGateKeeperTests.m */; };
-		7D648DB51A19DB8D005C5317 /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D648DB41A19DB8D005C5317 /* KiiSDK.framework */; };
+		7D648DB71A19DC52005C5317 /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D648DB61A19DC52005C5317 /* KiiSDK.framework */; };
+		7D648DBA1A19DD9E005C5317 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D648DB91A19DD9E005C5317 /* MobileCoreServices.framework */; };
+		7D648DBC1A19DDA4005C5317 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D648DBB1A19DDA4005C5317 /* Accounts.framework */; };
+		7D648DBE1A19DDAB005C5317 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D648DBD1A19DDAB005C5317 /* Social.framework */; };
+		7D648DC01A19DDB1005C5317 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D648DBF1A19DDB1005C5317 /* Security.framework */; };
+		7D648DC21A19DDB7005C5317 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D648DC11A19DDB7005C5317 /* ImageIO.framework */; };
+		7D648DC41A19DDCA005C5317 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D648DC31A19DDCA005C5317 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +47,14 @@
 		7D648DA31A19D76B005C5317 /* KiiGateKeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiiGateKeeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D648DA81A19D76B005C5317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D648DA91A19D76B005C5317 /* KiiGateKeeperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiiGateKeeperTests.m; sourceTree = "<group>"; };
-		7D648DB41A19DB8D005C5317 /* KiiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KiiSDK.framework; sourceTree = "<group>"; };
+		7D648DB61A19DC52005C5317 /* KiiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KiiSDK.framework; sourceTree = "<group>"; };
+		7D648DB81A19DD1C005C5317 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7D648DB91A19DD9E005C5317 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7D648DBB1A19DDA4005C5317 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		7D648DBD1A19DDAB005C5317 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		7D648DBF1A19DDB1005C5317 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7D648DC11A19DDB7005C5317 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		7D648DC31A19DDCA005C5317 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +62,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D648DB51A19DB8D005C5317 /* KiiSDK.framework in Frameworks */,
+				7D648DC41A19DDCA005C5317 /* libsqlite3.dylib in Frameworks */,
+				7D648DC21A19DDB7005C5317 /* ImageIO.framework in Frameworks */,
+				7D648DC01A19DDB1005C5317 /* Security.framework in Frameworks */,
+				7D648DBE1A19DDAB005C5317 /* Social.framework in Frameworks */,
+				7D648DBC1A19DDA4005C5317 /* Accounts.framework in Frameworks */,
+				7D648DBA1A19DD9E005C5317 /* MobileCoreServices.framework in Frameworks */,
+				7D648DB71A19DC52005C5317 /* KiiSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +121,7 @@
 			children = (
 				7D648D8E1A19D76B005C5317 /* Info.plist */,
 				7D648D8F1A19D76B005C5317 /* main.m */,
+				7D648DB81A19DD1C005C5317 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -126,7 +146,13 @@
 		7D648DB31A19DB7F005C5317 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7D648DB41A19DB8D005C5317 /* KiiSDK.framework */,
+				7D648DC31A19DDCA005C5317 /* libsqlite3.dylib */,
+				7D648DC11A19DDB7005C5317 /* ImageIO.framework */,
+				7D648DBF1A19DDB1005C5317 /* Security.framework */,
+				7D648DBD1A19DDAB005C5317 /* Social.framework */,
+				7D648DBB1A19DDA4005C5317 /* Accounts.framework */,
+				7D648DB91A19DD9E005C5317 /* MobileCoreServices.framework */,
+				7D648DB61A19DC52005C5317 /* KiiSDK.framework */,
 			);
 			name = frameworks;
 			sourceTree = "<group>";
@@ -298,6 +324,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -338,6 +365,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -359,6 +387,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/KiiGateKeeper",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = KiiGateKeeper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -373,6 +403,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/KiiGateKeeper",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = KiiGateKeeper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

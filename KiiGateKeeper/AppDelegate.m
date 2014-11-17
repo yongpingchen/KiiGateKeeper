@@ -16,7 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // Kii initialization
+    [Kii beginWithID:@"734a615f"
+              andKey:@"c85705b17bd4f8961ebe3c18bc7e2178"
+             andSite:kiiSiteJP];
     return YES;
 }
 
