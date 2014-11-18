@@ -20,6 +20,21 @@
     [Kii beginWithID:@"734a615f"
               andKey:@"c85705b17bd4f8961ebe3c18bc7e2178"
              andSite:kiiSiteJP];
+    _locationManager = [[CLLocationManager alloc] init];
+    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSString* accessToken = [defaults objectForKey:@"accessToken"];
+    if (accessToken) {
+        [KiiUser authenticateWithToken:accessToken andBlock:^(KiiUser *user, NSError *error) {
+            if (!error) {
+                CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@""] identifier:@""];
+                //TODO: implementation.
+                [_locationManager startRangingBeaconsInRegion:region];
+            }
+        }];
+    }
+    
+    
     return YES;
 }
 

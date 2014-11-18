@@ -21,6 +21,8 @@
 		7D648DC01A19DDB1005C5317 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D648DBF1A19DDB1005C5317 /* Security.framework */; };
 		7D648DC21A19DDB7005C5317 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D648DC11A19DDB7005C5317 /* ImageIO.framework */; };
 		7D648DC41A19DDCA005C5317 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D648DC31A19DDCA005C5317 /* libsqlite3.dylib */; };
+		D5B341E81A19FE8200B4E782 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B341E71A19FE8200B4E782 /* CoreLocation.framework */; };
+		D5B341EA1A19FE8900B4E782 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B341E91A19FE8900B4E782 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		7D648DBF1A19DDB1005C5317 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7D648DC11A19DDB7005C5317 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		7D648DC31A19DDCA005C5317 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D5B341E71A19FE8200B4E782 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D5B341E91A19FE8900B4E782 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B341EA1A19FE8900B4E782 /* CoreBluetooth.framework in Frameworks */,
+				D5B341E81A19FE8200B4E782 /* CoreLocation.framework in Frameworks */,
 				7D648DC41A19DDCA005C5317 /* libsqlite3.dylib in Frameworks */,
 				7D648DC21A19DDB7005C5317 /* ImageIO.framework in Frameworks */,
 				7D648DC01A19DDB1005C5317 /* Security.framework in Frameworks */,
@@ -85,6 +91,8 @@
 		7D648D811A19D76B005C5317 = {
 			isa = PBXGroup;
 			children = (
+				D5B341E91A19FE8900B4E782 /* CoreBluetooth.framework */,
+				D5B341E71A19FE8200B4E782 /* CoreLocation.framework */,
 				7D648D8C1A19D76B005C5317 /* KiiGateKeeper */,
 				7D648DA61A19D76B005C5317 /* KiiGateKeeperTests */,
 				7D648D8B1A19D76B005C5317 /* Products */,
@@ -206,6 +214,11 @@
 				TargetAttributes = {
 					7D648D891A19D76B005C5317 = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					7D648DA21A19D76B005C5317 = {
 						CreatedOnToolsVersion = 6.1;
@@ -464,6 +477,7 @@
 				7D648DAF1A19D76B005C5317 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D648DB01A19D76B005C5317 /* Build configuration list for PBXNativeTarget "KiiGateKeeperTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +486,7 @@
 				7D648DB21A19D76B005C5317 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

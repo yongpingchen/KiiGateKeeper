@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@import CoreLocation;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (readonly, nonatomic) CLLocationManager *locationManager;
 
 @end
 
