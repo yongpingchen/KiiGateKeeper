@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSString* accessToken = [defaults objectForKey:@"accessToken"];
+    if (accessToken) {
+        [KiiUser authenticateWithToken:accessToken andBlock:^(KiiUser *user, NSError *error) {
+            if (!error) {
+                
+                CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:RP_UUID] identifier:@"raspberry_pi"];
+                //TODO: implementation.
+                [appDelegate.locationManager startMonitoringForRegion:region];
+                NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:user.userID];
+                
+                // Initialize the Beacon Region
+                self.myBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
+                                                                              major:0
+                                                                              minor:0
+                                                                         identifier:@"mylogs"];
+                
+            }
+        }];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
