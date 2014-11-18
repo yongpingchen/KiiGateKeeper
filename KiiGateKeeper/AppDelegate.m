@@ -21,9 +21,19 @@
               andKey:@"c85705b17bd4f8961ebe3c18bc7e2178"
              andSite:kiiSiteJP];
     _locationManager = [[CLLocationManager alloc] init];
+    [_locationManager requestAlwaysAuthorization];
     _locationManager.delegate=self;
-
-    
+//    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"2F234454-CF6D-4A0F-ADF2-F4911BA9FFA6"] major:0 minor:0 identifier:@"raspberry.pi"];
+//    //TODO: implementation.
+//    [self.locationManager startMonitoringForRegion:region];
+//    NSError* error= nil;
+//    [KiiUser authenticateSynchronous:@"kiisecurity" withPassword:@"kiisecurity" andError:&error];
+//    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+//    if (!error) {
+//        [defaults setObject:[KiiUser currentUser].accessToken forKey:@"accessToken"];
+//        [defaults synchronize];
+//    }
+//    
     return YES;
 }
 
@@ -60,7 +70,7 @@
         //    NSLog(@"locationManager didDetermineState INSIDE for %@", region.identifier);
         [_locationManager startRangingBeaconsInRegion:(CLBeaconRegion*)region];
     }else if(state == CLRegionStateOutside) {
-    
+        
     }
 }
 
@@ -71,6 +81,15 @@
 
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
-    
+    if (beacons.count>0) {
+        CLBeacon* b1 =[beacons objectAtIndex:0];
+        NSString *desc1= [NSString stringWithFormat:@"%@-%ld-%ld",[b1.proximityUUID UUIDString],(long)[b1.major integerValue],(long)[b1.minor integerValue]];
+        
+        if (b1.rssi == 0) {
+            return;
+        }
+        NSLog(@"%d - %f",b1.proximity, b1.accuracy);
+        NSLog(@"Beacon %@",desc1);
+    }
 }
 @end
