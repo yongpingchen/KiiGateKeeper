@@ -37,7 +37,8 @@
     
     if ([KiiUser currentUser]) {
         [self bluetoothTask:[KiiUser currentUser]];
-        [self performSegueWithIdentifier:@"showAccessLog" sender:nil];
+        UITableViewController *roleTableVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"RoleTableViewController"];
+        [self.navigationController pushViewController:roleTableVC animated:YES];
         return;
     }
     
@@ -47,8 +48,9 @@
         [KiiUser authenticateWithToken:accessToken andBlock:^(KiiUser *user, NSError *error) {
             if (!error) {
                 [self bluetoothTask:user];
-                [self performSegueWithIdentifier:@"showAccessLog" sender:nil];
-                
+//                [self performSegueWithIdentifier:@"showAccessLog" sender:nil];
+                UITableViewController *roleTableVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"RoleTableViewController"];
+                [self.navigationController pushViewController:roleTableVC animated:YES];
             }else{
                 [self performSegueWithIdentifier:@"showLogin" sender:nil];
             }

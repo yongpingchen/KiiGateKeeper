@@ -28,7 +28,14 @@
 //    [self.locationManager startMonitoringForRegion:region];
 //    NSError* error= nil;
 //    [KiiUser authenticateSynchronous:@"kiisecurity" withPassword:@"kiisecurity" andError:&error];
-//    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"accessToken"]) {
+        [KiiUser authenticateWithToken:[defaults objectForKey:@"accessToken"] andBlock:^(KiiUser *user, NSError *error) {
+            if (error) {
+                NSLog(@"log with stored access token fail");
+            }
+        }];
+    }
 //    if (!error) {
 //        [defaults setObject:[KiiUser currentUser].accessToken forKey:@"accessToken"];
 //        [defaults synchronize];

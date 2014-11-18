@@ -32,7 +32,7 @@
         <!--Gate Keeper-->
         <scene sceneID="La8-jo-05U">
             <objects>
-                <viewController id="3mi-uf-RG7" sceneMemberID="viewController">
+                <viewController id="3mi-uf-RG7" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M2M-Dk-DCD"/>
                         <viewControllerLayoutGuide type="bottom" id="8L0-sw-NWl"/>
@@ -73,6 +73,9 @@
                                         <include reference="R9A-J6-JXO"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="tapLoginButton:" destination="3mi-uf-RG7" eventType="touchUpInside" id="25C-gh-bfw"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username or Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpt-JF-8kR">
                                 <rect key="frame" x="55" y="163" width="490" height="30"/>
@@ -124,6 +127,9 @@
                                 <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                     <rect key="frame" x="422" y="299" width="123" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="tapSignUpButton:" destination="3mi-uf-RG7" eventType="touchUpInside" id="X2L-uV-eM1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -271,6 +277,10 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Gate Keeper" id="QM8-lp-dsz"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="KbG-cF-gpo" id="Yg4-mP-nHr"/>
+                        <outlet property="userNameTextField" destination="gpt-JF-8kR" id="gP5-3A-uuI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jb9-6v-8I3" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,7 +289,7 @@
         <!--Table View Controller-->
         <scene sceneID="4Z7-A3-ZUM">
             <objects>
-                <tableViewController id="vBc-8B-D7N" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RoleTableViewController" id="vBc-8B-D7N" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gTM-93-LG7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
